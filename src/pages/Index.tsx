@@ -189,44 +189,48 @@ const Index = () => {
       <section id="about" className="py-28">
         <div className="container">
           <SectionTitle label="О специалисте" title="Признанный эксперт отрасли" />
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
-            <div>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                <span className="text-foreground font-medium">Юлия Сергеевна Макарова</span> — признанный эксперт в сфере тендерного сопровождения с 14-летним опытом успешной работы. За время профессиональной деятельности реализовала сотни успешных проектов в различных отраслях экономики.
+
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
+            {/* Фото — компактное, слева */}
+            <div className="relative shrink-0 w-56 mx-auto lg:mx-0">
+              <div className="absolute -inset-3 bg-gold/10 blur-2xl rounded-full" />
+              <div className="relative rounded-2xl overflow-hidden ring-1 ring-gold/25 shadow-2xl">
+                <img src={PORTRAIT} alt="Юлия Макарова" className="w-full object-cover aspect-[3/4]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-graphite-dark/60 via-transparent to-transparent" />
+              </div>
+              <div className="mt-4 text-center">
+                <p className="font-display text-base font-semibold text-gold leading-tight">Юлия Сергеевна<br />Макарова</p>
+                <p className="text-xs text-muted-foreground mt-1 tracking-wide">Эксперт тендерного сопровождения</p>
+              </div>
+            </div>
+
+            {/* Описание — справа */}
+            <div className="flex-1">
+              <div className="flex flex-wrap gap-3 mb-7">
+                {[['14 лет', 'опыта в отрасли'], ['500+', 'выигранных тендеров'], ['Top-5%', 'специалистов РФ']].map(([n, l]) => (
+                  <div key={l} className="glass-card rounded-xl px-5 py-3 flex flex-col items-center min-w-[110px]">
+                    <span className="font-display text-2xl font-semibold text-gold">{n}</span>
+                    <span className="text-xs text-muted-foreground text-center mt-0.5">{l}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-lg text-foreground/90 leading-relaxed mb-4">
+                <span className="text-gold font-semibold">Юлия Сергеевна Макарова</span> — один из ведущих экспертов России в сфере тендерного сопровождения. За 14 лет реализовала сотни проектов в различных отраслях, выстроила тендерные отделы с нуля в компаниях разного масштаба.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-10">
-                Успешный опыт построения тендерных отделов с нуля, системный подход к управлению проектами и налаженные связи с ключевыми участниками рынка.
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Глубокое знание 44-ФЗ и 223-ФЗ, системный подход к управлению рисками, налаженные связи с ключевыми участниками рынка — всё это позволяет добиваться результата там, где другие отступают.
               </p>
 
-              <h3 className="font-display text-2xl font-semibold text-gold mb-5">Ключевые компетенции</h3>
-              <ul className="space-y-3">
+              <h3 className="font-display text-xl font-semibold text-gold mb-4">Ключевые компетенции</h3>
+              <ul className="grid sm:grid-cols-2 gap-2.5">
                 {COMPETENCES.map((c) => (
                   <li key={c} className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-gold shrink-0 mt-0.5" />
-                    <span className="text-muted-foreground">{c}</span>
+                    <Icon name="Check" size={18} className="text-gold shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground">{c}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="glass-card rounded-2xl p-8">
-              <h3 className="font-display text-2xl font-semibold text-gold mb-6">Портфолио проектов</h3>
-              <div className="space-y-4 mb-10">
-                {PORTFOLIO.map((p, i) => (
-                  <div key={p} className="flex items-center gap-4 pb-4 border-b border-gold/10 last:border-0">
-                    <span className="font-display text-xl text-gold/60 w-8">{`0${i + 1}`}</span>
-                    <span className="text-muted-foreground">{p}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[['Анализ перспектив', 'Briefcase'], ['Юр. сопровождение', 'Gavel'], ['Контроль исполнения', 'ClipboardCheck'], ['Минимизация рисков', 'ShieldCheck']].map(([t, ic]) => (
-                  <div key={t} className="flex items-center gap-3 p-3 rounded-lg bg-graphite/50">
-                    <Icon name={ic} size={20} className="text-gold shrink-0" />
-                    <span className="text-sm">{t}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
