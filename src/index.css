@@ -4,35 +4,42 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --graphite: 220 12% 12%;
+    --graphite-light: 220 10% 18%;
+    --graphite-dark: 220 14% 8%;
+    --gold: 41 54% 58%;
+    --gold-light: 44 68% 72%;
+    --gold-dark: 38 48% 42%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --background: 220 14% 8%;
+    --foreground: 40 20% 94%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 220 12% 12%;
+    --card-foreground: 40 20% 94%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 220 12% 12%;
+    --popover-foreground: 40 20% 94%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 41 54% 58%;
+    --primary-foreground: 220 14% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 220 10% 18%;
+    --secondary-foreground: 40 20% 94%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 40 8% 62%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: 41 54% 58%;
+    --accent-foreground: 220 14% 8%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 40 20% 94%;
 
-    --radius: 0.5rem;
+    --border: 220 8% 24%;
+    --input: 220 8% 24%;
+    --ring: 41 54% 58%;
+
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -96,6 +103,70 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(
+        circle at 20% 0%,
+        hsl(41 54% 58% / 0.08),
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at 90% 20%,
+        hsl(41 54% 58% / 0.05),
+        transparent 40%
+      );
+    background-attachment: fixed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-gold text-graphite-dark;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--gold-dark)),
+      hsl(var(--gold-light)),
+      hsl(var(--gold))
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply animate-shimmer;
+  }
+
+  .gold-line {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--gold)),
+      transparent
+    );
+  }
+
+  .glass-card {
+    @apply bg-graphite-light/40 backdrop-blur-sm border border-gold/15;
+    box-shadow: 0 8px 40px -12px hsl(220 14% 4% / 0.6);
+  }
+
+  .glass-card:hover {
+    @apply border-gold/40;
+    box-shadow: 0 12px 48px -12px hsl(41 54% 58% / 0.25);
+  }
+
+  .gold-border-btn {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--gold-dark)),
+      hsl(var(--gold))
+    );
+    box-shadow: 0 6px 24px -8px hsl(41 54% 58% / 0.5);
   }
 }
