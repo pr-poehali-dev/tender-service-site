@@ -4,14 +4,14 @@
 
 @layer base {
   :root {
-    --graphite: 220 12% 12%;
-    --graphite-light: 220 10% 18%;
-    --graphite-dark: 220 14% 8%;
-    --gold: 41 54% 58%;
-    --gold-light: 44 68% 72%;
-    --gold-dark: 38 48% 42%;
+    --graphite: 240 8% 14%;
+    --graphite-light: 240 6% 20%;
+    --graphite-dark: 240 10% 6%;
+    --gold: 41 60% 62%;
+    --gold-light: 44 72% 76%;
+    --gold-dark: 38 50% 44%;
 
-    --background: 220 14% 8%;
+    --background: 240 10% 6%;
     --foreground: 40 20% 94%;
 
     --card: 220 12% 12%;
@@ -106,14 +106,25 @@
     @apply bg-background text-foreground font-sans antialiased;
     background-image:
       radial-gradient(
-        circle at 20% 0%,
-        hsl(41 54% 58% / 0.08),
-        transparent 45%
+        ellipse 80% 50% at 50% -10%,
+        hsl(41 60% 62% / 0.12),
+        transparent
       ),
       radial-gradient(
-        circle at 90% 20%,
-        hsl(41 54% 58% / 0.05),
-        transparent 40%
+        ellipse 60% 40% at 0% 60%,
+        hsl(240 10% 12% / 0.9),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 50% 60% at 100% 80%,
+        hsl(41 50% 44% / 0.07),
+        transparent
+      ),
+      linear-gradient(
+        160deg,
+        hsl(240 12% 7%) 0%,
+        hsl(240 8% 10%) 50%,
+        hsl(240 12% 7%) 100%
       );
     background-attachment: fixed;
   }

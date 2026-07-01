@@ -115,7 +115,12 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="relative pt-40 pb-28 md:pt-52 md:pb-36">
+      <section id="hero" className="relative pt-40 pb-28 md:pt-52 md:pb-36 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-gold/5 blur-[120px]" />
+          <div className="absolute top-20 left-0 w-[400px] h-[400px] rounded-full bg-gold/4 blur-[100px]" />
+          <div className="absolute bottom-0 right-0 w-[500px] h-[300px] rounded-full bg-gold/3 blur-[100px]" />
+        </div>
         <div className="container grid lg:grid-cols-2 gap-14 items-center">
           <div className="animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-gold/25 text-gold text-xs uppercase tracking-[0.2em]">
