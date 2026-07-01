@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 const LOGO = 'https://cdn.poehali.dev/projects/e9a06c31-0304-4bca-9e6c-1405841c112c/files/a640b473-3b86-4e15-abf8-76d0f6443956.jpg';
-const PORTRAIT = 'https://cdn.poehali.dev/projects/e9a06c31-0304-4bca-9e6c-1405841c112c/files/ddd59726-5a73-4b6f-b6e2-03c01a2c6832.jpg';
+const PORTRAIT = 'https://i.postimg.cc/YCjV1ZhV/IMG-4704.png';
 
 const NAV = [
   { id: 'hero', label: 'Главная' },
