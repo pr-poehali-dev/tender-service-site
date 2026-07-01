@@ -74,7 +74,7 @@ const Index = () => {
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-3 group">
             <img src={LOGO} alt="Логотип" className="w-24 h-24 object-contain mix-blend-lighten group-hover:opacity-90 transition-all" />
             <div className="text-left leading-tight">
-              <p className="font-display text-xl font-semibold tracking-wide text-gold">Юлия Макарова</p>
+              <p className="font-display text-xl font-semibold tracking-[0.3em] text-gold">M&nbsp;&nbsp;G&nbsp;&nbsp;S</p>
               <p className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Тендерное сопровождение</p>
             </div>
           </button>
@@ -305,7 +305,7 @@ const Index = () => {
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <img src={LOGO} alt="Логотип" className="w-20 h-20 object-contain mix-blend-lighten" />
-            <span className="font-display text-lg font-semibold text-gold">Юлия Макарова</span>
+            <span className="font-display text-lg font-semibold tracking-[0.3em] text-gold">M&nbsp;&nbsp;G&nbsp;&nbsp;S</span>
           </div>
           <p className="text-sm text-muted-foreground">© 2026 — Тендерное сопровождение под ключ</p>
         </div>
