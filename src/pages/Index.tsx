@@ -156,16 +156,24 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="relative animate-fade-in-slow">
-            <div className="absolute -inset-4 bg-gold/10 blur-3xl rounded-full" />
-            <div className="relative rounded-2xl overflow-hidden ring-1 ring-gold/25 shadow-2xl">
-              <img src={PORTRAIT} alt="Юлия Макарова" className="w-full h-full object-cover aspect-[4/5]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-graphite-dark/70 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 glass-card rounded-xl p-5">
-                <p className="font-display text-2xl font-semibold text-gold">Юлия Сергеевна Макарова</p>
-                <p className="text-sm text-muted-foreground">Эксперт в тендерном сопровождении</p>
+          <div className="relative animate-fade-in-slow grid grid-cols-2 gap-4">
+            {[
+              { value: '500+', label: 'выигранных тендеров', icon: 'Trophy', sub: 'за 14 лет работы' },
+              { value: '₽2.8 млрд', label: 'сумма контрактов', icon: 'TrendingUp', sub: 'в разных отраслях' },
+              { value: '94%', label: 'процент побед', icon: 'Target', sub: 'в конкурентных торгах' },
+              { value: '48 ч', label: 'среднее время отклика', icon: 'Zap', sub: 'от заявки до анализа' },
+            ].map(({ value, label, icon, sub }) => (
+              <div key={label} className="glass-card rounded-2xl p-6 flex flex-col gap-3 hover:-translate-y-1 transition-transform duration-300">
+                <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold">
+                  <Icon name={icon} size={20} />
+                </div>
+                <p className="font-display text-3xl font-semibold text-gold leading-none">{value}</p>
+                <div>
+                  <p className="text-sm font-medium text-foreground/90">{label}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{sub}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
