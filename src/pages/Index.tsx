@@ -72,7 +72,7 @@ const Index = () => {
       <header className="fixed top-0 inset-x-0 z-50 border-b border-gold/10 bg-graphite-dark/80 backdrop-blur-md">
         <div className="container flex items-center justify-between h-20">
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-3 group">
-            <img src={LOGO} alt="Логотип" className="w-11 h-11 rounded-full object-cover ring-1 ring-gold/40 group-hover:ring-gold transition-all" />
+            <img src={LOGO} alt="Логотип" className="w-16 h-16 rounded-lg object-contain bg-graphite-light/60 p-1 ring-1 ring-gold/40 group-hover:ring-gold transition-all" />
             <div className="text-left leading-tight">
               <p className="font-display text-xl font-semibold tracking-wide text-gold">Юлия Макарова</p>
               <p className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Тендерное сопровождение</p>
@@ -304,7 +304,7 @@ const Index = () => {
       <footer className="py-12 border-t border-gold/10">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src={LOGO} alt="Логотип" className="w-9 h-9 rounded-full object-cover ring-1 ring-gold/40" />
+            <img src={LOGO} alt="Логотип" className="w-14 h-14 rounded-lg object-contain bg-graphite-light/60 p-1 ring-1 ring-gold/40" />
             <span className="font-display text-lg font-semibold text-gold">Юлия Макарова</span>
           </div>
           <p className="text-sm text-muted-foreground">© 2026 — Тендерное сопровождение под ключ</p>
