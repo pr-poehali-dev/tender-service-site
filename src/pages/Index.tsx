@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
-const LOGO = 'https://i.postimg.cc/bJ6kHCGB/Sni5mok.jpg';
+const LOGO = 'https://i.postimg.cc/2S7WsRNF/Bez-5imeni.png';
 const PORTRAIT = 'https://i.postimg.cc/YCjV1ZhV/IMG-4704.png';
 
 const NAV = [
