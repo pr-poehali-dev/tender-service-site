@@ -71,11 +71,11 @@ const Index = () => {
       {/* HEADER */}
       <header className="fixed top-0 inset-x-0 z-50 border-b border-gold/10 bg-graphite-dark/80 backdrop-blur-md">
         <div className="container flex items-center justify-between h-20">
-          <button onClick={() => scrollTo('hero')} className="flex items-center gap-3 group">
-            <img src={LOGO} alt="Логотип" className="w-24 h-24 object-contain mix-blend-lighten group-hover:opacity-90 transition-all" />
-            <div className="text-left leading-tight">
-              <p className="font-display text-xl font-semibold tracking-[0.3em] text-gold">M&nbsp;&nbsp;G&nbsp;&nbsp;S</p>
-              <p className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Тендерное сопровождение</p>
+          <button onClick={() => scrollTo('hero')} className="flex items-center gap-4 group">
+            <img src={LOGO} alt="Логотип" className="w-14 h-14 object-contain mix-blend-lighten group-hover:opacity-90 transition-all rounded-full" />
+            <div className="text-left leading-none">
+              <p className="font-display text-3xl font-bold tracking-[0.18em] text-gold" style={{fontFamily:'Playfair Display, serif', letterSpacing:'0.18em'}}>M&nbsp;G&nbsp;S</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-1">Тендерное сопровождение</p>
             </div>
           </button>
 
@@ -125,31 +125,38 @@ const Index = () => {
           <div className="animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-gold/25 text-gold text-xs uppercase tracking-[0.2em]">
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-              Эксперт с 14-летним опытом
+              № 1 в тендерном сопровождении — 14 лет опыта
             </div>
-            <h1 className="font-display text-5xl md:text-7xl font-semibold leading-[1.05] mb-7">
-              Тендерное
+            <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] mb-5">
+              Выигрывайте тендеры
               <br />
-              сопровождение
-              <br />
-              <span className="text-gold-gradient">под ключ</span>
+              <span className="text-gold-gradient">с первой попытки</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-md mb-10 leading-relaxed">
-              Помогаю бизнесу выигрывать государственные и корпоративные закупки — от поиска тендера до исполнения контракта.
+            <p className="text-xl text-foreground/80 max-w-lg mb-4 leading-relaxed font-medium">
+              Берём на себя весь цикл — от поиска закупки до подписания контракта. Вы получаете результат, не тратя время на бюрократию.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={() => scrollTo('contact-form')} className="gold-border-btn text-graphite-dark font-semibold h-13 px-8 hover:opacity-90">
-                Получить консультацию
+            <p className="text-base text-muted-foreground max-w-md mb-10 leading-relaxed">
+              500+ выигранных тендеров · ₽2.8 млрд контрактов · 94% процент побед
+            </p>
+
+            <div className="flex flex-wrap gap-4 mb-6">
+              <Button size="lg" onClick={() => scrollTo('contact-form')} className="gold-border-btn text-graphite-dark font-bold h-14 px-12 hover:opacity-90 text-base">
+                Получить бесплатный анализ
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollTo('services')} className="h-13 px-8 border-gold/40 text-gold hover:bg-gold/10 hover:text-gold">
-                Наши услуги
+              <Button size="lg" variant="outline" onClick={() => scrollTo('services')} className="h-14 px-10 border-gold/40 text-gold hover:bg-gold/10 hover:text-gold text-base">
+                Узнать об услугах
               </Button>
             </div>
 
-            <div className="flex gap-10 mt-14 pt-8 border-t border-gold/10">
-              {[['14', 'лет опыта'], ['500+', 'проектов'], ['2', 'ключевых ФЗ']].map(([n, l]) => (
+            <p className="text-xs text-muted-foreground mb-10">
+              <Icon name="Clock" size={13} className="inline mr-1 text-gold" />
+              Ответим в течение 2 часов — бесплатно и без обязательств
+            </p>
+
+            <div className="flex gap-10 pt-8 border-t border-gold/10">
+              {[['14', 'лет опыта'], ['500+', 'побед'], ['94%', 'выигрышей']].map(([n, l]) => (
                 <div key={l}>
-                  <p className="font-display text-4xl font-semibold text-gold">{n}</p>
+                  <p className="font-display text-4xl font-bold text-gold">{n}</p>
                   <p className="text-sm text-muted-foreground">{l}</p>
                 </div>
               ))}
@@ -311,6 +318,28 @@ const Index = () => {
                 </div>
                 <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2">{c.title}</p>
                 <p className="font-display text-2xl font-semibold text-gold">{c.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PARTNERS */}
+      <section className="py-20 border-t border-gold/10">
+        <div className="container">
+          <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">Нам доверяют крупнейшие компании России</p>
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            {[
+              { name: 'Газпром', abbr: 'ГАЗПРОМ' },
+              { name: 'Роснефть', abbr: 'РОСНЕФТЬ' },
+              { name: 'РЖД', abbr: 'РЖД' },
+              { name: 'Ростелеком', abbr: 'РОСТЕЛЕКОМ' },
+              { name: 'Сбербанк', abbr: 'СБЕР' },
+              { name: 'Лукойл', abbr: 'ЛУКОЙЛ' },
+              { name: 'Росатом', abbr: 'РОСАТОМ' },
+            ].map(({ name, abbr }) => (
+              <div key={name} className="glass-card rounded-xl px-7 py-4 flex items-center justify-center min-w-[130px] hover:border-gold/40 transition-all">
+                <span className="font-display text-lg font-bold tracking-widest text-foreground/40 hover:text-gold/70 transition-colors select-none">{abbr}</span>
               </div>
             ))}
           </div>
