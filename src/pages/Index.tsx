@@ -328,19 +328,18 @@ const Index = () => {
       <section className="py-20 border-t border-gold/10">
         <div className="container">
           <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">Нам доверяют крупнейшие компании России</p>
-          <div className="flex flex-wrap justify-center items-center gap-5 md:gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-5 md:gap-6">
             {[
-              { name: 'Газпром', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Gazprom_Logo.svg/320px-Gazprom_Logo.svg.png' },
-              { name: 'Роснефть', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Rosneft_Logo_2017.svg/320px-Rosneft_Logo_2017.svg.png' },
-              { name: 'РЖД', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Russian_Railways-Logo.svg/320px-Russian_Railways-Logo.svg.png' },
-              { name: 'Ростелеком', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Rostelecom_logo_%282022%29.svg/320px-Rostelecom_logo_%282022%29.svg.png' },
-              { name: 'Сбербанк', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sber_logo_2020.svg/320px-Sber_logo_2020.svg.png' },
-              { name: 'Лукойл', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Lukoil_logo.svg/320px-Lukoil_logo.svg.png' },
-              { name: 'Росатом', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Rosatom_logo_%28emblem%29.svg/160px-Rosatom_logo_%28emblem%29.svg.png' },
+              { name: 'Газпром',    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Gazprom_logo.svg' },
+              { name: 'Роснефть',   logo: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Rosneft_logo.svg' },
+              { name: 'РЖД',        logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Russian_Railways_Logo.svg' },
+              { name: 'Ростелеком', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Rostelecom_logo_English_2018.svg' },
+              { name: 'Сбербанк',   logo: 'https://upload.wikimedia.org/wikipedia/commons/2/27/Logo_Sberbank.svg' },
+              { name: 'Лукойл',     logo: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Lukoil_company_logo.svg' },
             ].map(({ name, logo }) => (
-              <div key={name} className="glass-card rounded-xl px-6 py-5 flex flex-col items-center justify-center gap-2 w-[140px] hover:border-gold/40 transition-all group">
-                <img src={logo} alt={name} className="h-10 w-auto object-contain opacity-50 group-hover:opacity-80 transition-opacity brightness-0 invert" />
-                <span className="text-[10px] uppercase tracking-widest text-muted-foreground/60">{name}</span>
+              <div key={name} className="bg-white rounded-2xl px-8 py-5 flex flex-col items-center justify-center gap-3 w-[160px] shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all duration-300">
+                <img src={logo} alt={name} className="h-10 w-auto object-contain" />
+                <span className="text-[10px] uppercase tracking-widest text-gray-400 font-medium">{name}</span>
               </div>
             ))}
           </div>
